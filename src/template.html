@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOODOO</title>
+  </head>
+  <body>
+    <header>
+      <h1>TOODOO</h1>
+    </header>
+    <div class="main-section">
+      <nav>
+        <ul>
+          <li class="category">HOME</li>
+          <li class="category">TODAY</li>
+          <li class="category">THIS WEEK</li>
+        </ul>
+        <h2>PROJECTS<span class="add-project">+</span></h2>
+        <ul class="projects">
+        </ul>
+      </nav>
+      <main></main>
+    </div>
+    <dialog class="project dialog">
+      <form id="project-form" method="dialog">
+        <h2>Enter the project's name</h2>
+        <input type="text" id="name" class="project-input" placeholder="Project name">
+        <div class="buttons">
+          <button class="cancel" type="button">Cancel</button>
+          <button class="add" type="submit">Add</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog class="task dialog">
+      <form id="project-form" method="dialog">
+        <h2>Enter the project's name</h2>
+        <input type="text" id="name" class="project-input">
+        <div class="buttons">
+          <button class="cancel" type="button">Cancel</button>
+          <button class="add" type="submit">Add</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
 </html>
+

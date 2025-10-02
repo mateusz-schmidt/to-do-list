@@ -1,0 +1,182 @@
+/* //resets */
+
+:root {
+  --background: rgb(35, 37, 41);
+  --lighter-background: rgb(41, 44, 49);
+  --green: rgb(68, 132, 96);
+  --red: rgb(227, 121, 106);
+  --text: rgb(226, 227, 231);
+  --gray: rgb(65, 69, 76);
+  font-family: monospace;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+  list-style-type: none;
+}
+
+/* //body */
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* //header */
+
+header {
+  border-bottom: 4px solid var(--gray);
+  padding: 10px 0px;
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+/* //main section's general styles */
+
+.main-section {
+  display: flex;
+  height: 100%;
+}
+
+.main-section * {
+  width: fit-content;
+}
+
+header *,
+nav *,
+h2 {
+  user-select: none;
+}
+
+/* //navigation bar */
+
+nav {
+  border-right: 4px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 10px;
+  height: 100%;
+  background-color: var(--lighter-background);
+  width: 200px;
+  font-size: 1.8rem;
+}
+
+nav li:hover {
+  cursor: pointer;
+}
+
+.projects * {
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.delete-btn {
+  opacity: 0;          
+  pointer-events: none; 
+  transition: opacity 0.3s ease; 
+  margin: 0;
+}
+
+li:hover .delete-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.add-project {
+  opacity: 0;          
+  transition: opacity 0.3s ease; 
+}
+
+h2:hover .add-project {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* //tasks view */
+
+.main-header {
+  font-size: 1.8rem;
+}
+
+main {
+  padding: 10px;
+}
+
+.add-task {
+  opacity: 0;          
+  transition: opacity 0.3s ease; 
+}
+
+h2:hover .add-task {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* //dialog */
+
+.dialog {
+  margin: 10px auto;
+  border: 5px solid var(--gray);
+  background-color: var(--lighter-background);
+  border-radius: 10px;
+}
+
+form {
+  color: var(--text);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  background-color: var(--gray);
+  border:none;
+  padding: 5px 10px;
+  color: var(--text);
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons * {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  flex: 1;
+}
+
+.buttons *:hover {
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: var(--red);
+}
+
+.add {
+  background-color: var(--green);
+}
+
+
+
